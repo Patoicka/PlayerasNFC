@@ -99,7 +99,7 @@ export const Account = () => {
 
                         <form onSubmit={handleGo}>
                             <div className="flex justify-center relative w-full mt-8">
-                                <label className="absolute -top-3.5 left-[150px] bg-white px-1">
+                                <label className="absolute -top-3.5 left-44 bg-white px-1">
                                     Correo <span> <FontAwesomeIcon icon={faUser} /> </span>
                                 </label>
                                 <input
@@ -113,7 +113,7 @@ export const Account = () => {
                             </div>
 
                             <div className="flex justify-center relative w-full mt-8">
-                                <label className="absolute -top-3.5 left-[150px] bg-white px-1">
+                                <label className="absolute -top-3.5 left-44 bg-white px-1">
                                     Contraseña <span> <FontAwesomeIcon icon={faLock} /> </span>
                                 </label>
                                 <input
@@ -126,7 +126,7 @@ export const Account = () => {
                                 />
                                 <span
                                     onClick={() => setPass(!pass)}
-                                    className="absolute top-3 right-[150px] cursor-pointer"
+                                    className="absolute top-3 right-44 cursor-pointer"
                                 >
                                     <FontAwesomeIcon icon={faEye} />
                                 </span>

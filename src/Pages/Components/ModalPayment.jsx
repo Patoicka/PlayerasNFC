@@ -17,6 +17,9 @@ export const ModalPayment = ({ title, show, animated, onCancel, data }) => {
     const [load, setLoad] = useState(false);
     const [accept, setAccept] = useState(false);
 
+    console.log(data?.value?.select);
+    console.log(ticket);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -24,9 +27,23 @@ export const ModalPayment = ({ title, show, animated, onCancel, data }) => {
             console.log("Stripe no está cargado todavía.");
             return;
         }
+        setLoad(true);
+
+        const currentTicket = ticket || 0;
+        const newTicket = currentTicket + data.value.select;
+
+        dispatch(setTicket(newTicket));
+
+        setTimeout(() => {
+            setLoad(false);
+            setAccept(true);
+            setTimeout(() => {
+                setAccept(false);
+                onCancel();
+            }, 1000);
+        }, 1500);
 
         const cardElement = elements.getElement(CardElement);
-
         const { error, paymentIntent } = await stripe.confirmCardPayment(
             "pi_123456789_secret_987654321",
             {
@@ -35,17 +52,14 @@ export const ModalPayment = ({ title, show, animated, onCancel, data }) => {
                 },
             }
         );
-        dispatch(setTicket(ticket + data.value.select));
 
-        if (ticket) {
-            setLoad(true);
-            setTimeout(() => {
-                setLoad(false);
-                setAccept(true);
-            }, 1500);
+        if (error) {
+            console.log("Error en el pago:", error.message);
+        } else if (paymentIntent && paymentIntent.status === "succeeded") {
+            console.log("Pago exitoso");
         }
-
     };
+
 
     return (
         <Modal
