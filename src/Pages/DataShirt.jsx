@@ -51,7 +51,7 @@ export const DataShirt = () => {
                             :
                             <>
                                 <div className='relative'>
-                                    <h1 className="text-3xl uppercase font-semibold mb-2 text-center"> Sección de pago </h1>
+                                    <h1 className="text-3xl uppercase font-semibold mb-2 mt-2 text-center"> Sección de pago </h1>
                                     <span className='absolute top-2 left-6 cursor-pointer' onClick={() => navigate(-1)}> <FontAwesomeIcon icon={faChevronLeft} size='lg' /> </span>
                                 </div>
                                 <div className="flex w-full mt-8 justify-around px-20">
@@ -78,7 +78,7 @@ export const DataShirt = () => {
                                     </div>
                                 </div>
                                 <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-                                    <div className="flex flex-col w-full h-full items-start bg-gray-50 mt-12 pt-2">
+                                    <div className="flex flex-col w-full h-full items-start bg-gray-50 mt-8 pt-2">
                                         <div className='flex w-full items-start justify-center'>
                                             <div className="flex flex-col w-1/2 px-4 justify-center border-r border-black">
                                                 <h1 className="text-xl uppercase font-semibold text-center py-3"> Datos de envio </h1>
@@ -227,7 +227,7 @@ export const DataShirt = () => {
                                             >
                                                 Confirmar Compra
                                             </button>
-                                            <p className="px-4 text-justify italic mt-2">
+                                            <p className="px-10 text-center italic mt-2">
                                                 Por favor, verifique los datos de su compra. Una vez realizado el pago, no se podrán hacer devoluciones.
                                             </p>
                                         </div>
