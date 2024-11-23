@@ -62,7 +62,7 @@ export const DataShirt = () => {
                                         </div>
                                         <div className="flex flex-col">
                                             <h1 className="text-xl font-semibold"> Precio: </h1>
-                                            <h1 className=""> {data.price} </h1>
+                                            <h1 className=""> ${data.price} </h1>
                                         </div>
                                         <div className="flex flex-col">
                                             <h1 className="text-xl font-semibold"> Cantidad: </h1>

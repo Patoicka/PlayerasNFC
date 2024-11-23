@@ -11,7 +11,7 @@ export const NavBar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [select, setSelect] = useState('');
+    const [select, setSelect] = useState('Inicio');
     const [homeCss, setHomeCss] = useState('');
     const [accountCss, setAccountCss] = useState('');
     const [rechargeCss, setRechargeCss] = useState('');
