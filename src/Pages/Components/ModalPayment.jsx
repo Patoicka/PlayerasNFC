@@ -17,9 +17,6 @@ export const ModalPayment = ({ title, show, animated, onCancel, data }) => {
     const [load, setLoad] = useState(false);
     const [accept, setAccept] = useState(false);
 
-    console.log(data?.value?.select);
-    console.log(ticket);
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 

@@ -16,8 +16,6 @@ export const NavBar = () => {
     const [accountCss, setAccountCss] = useState('');
     const [rechargeCss, setRechargeCss] = useState('');
 
-    console.log(page);
-
     useEffect(() => {
         if (page === 'Recarga') {
             goRecharge()

@@ -1,7 +1,6 @@
 import { faEye, faLock, faSave, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-
 import hombre from '../assets/images/HombreP.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -138,7 +137,7 @@ export const Account = () => {
                                 <button
                                     type='submit'
                                     onClick={handleGo}
-                                    className="flex justify-center border-4 w-1/2 px-5 py-2 rounded-lg bg-celadon-700 text-white border-celadon-700 hover:text-celadon-700 hover:bg-white text-lg font-semibold"
+                                    className="flex justify-center border-4 w-1/2 px-5 py-2 rounded-lg bg-prussianBlue-600 text-white border-prussianBlue-700 hover:text-prussianBlue-700 hover:bg-white text-lg font-semibold"
                                 >
                                     Iniciar Sesión
                                     <span className="px-3">
