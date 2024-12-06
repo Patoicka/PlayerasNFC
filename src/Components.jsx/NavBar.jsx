@@ -68,8 +68,8 @@ export const NavBar = () => {
         <div className='flex flex-col w-full bg-prussianBlue-700 px-10'>
             <div className='flex flex-col relative text-white w-full justify-center text-center pt-6'>
                 <img src={Logo} alt="logo" width={75} className='absolute' />
-                <h1 className='text-4xl font-bold uppercase'> Playeras NFC </h1>
-                <p className='text-sm italic font-semibold'> ¡Olvidate del cash y entra al dash! </p>
+                <h1 className='text-4xl font-bold uppercase'> TESE SHIRTS </h1>
+                <p className='text-sm italic font-semibold'> ¡Sin cash, entra al flash! </p>
             </div>
             <div className='flex justify-around pt-6 pb-2'>
                 <span className={`px-4 text-gray-50 font-semibold cursor-pointer ${homeCss}`} onClick={goHome}> Inicio </span>
